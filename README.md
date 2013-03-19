@@ -3,6 +3,8 @@ FACEBOOK PAGES MANAGER
 
 An open-sourced Facebook Page Manager written in PHP and based on Twitter Bootstrap UI (HTML5).
 
+STATUS: WORK IN PROGRESS
+
 REQUIREMENTS
 ============
 
@@ -19,4 +21,5 @@ PLANNED FEATURES
 * A Resposive UI
 * Auto E-Mail Alerts
 * Provision for Public Anonymous post submissions (such as confessions pages,complaint pages etc)
+* Automatinc RSS posting to Facebook
 * ... and more to come ...
