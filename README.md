@@ -21,5 +21,5 @@ PLANNED FEATURES
 * A Resposive UI
 * Auto E-Mail Alerts
 * Provision for Public Anonymous post submissions (such as confessions pages,complaint pages etc)
-* Automatinc RSS posting to Facebook
+* Automatic RSS posting to Facebook
 * ... and more to come ...
