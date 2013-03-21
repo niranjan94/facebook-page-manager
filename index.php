@@ -53,22 +53,22 @@ mysql_select_db("database");
       <?php if(!empty($_GET['status'])&&$_GET['status']=='error') { ?>
         <div class="alert alert-error">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
-         	<strong>Oops !</strong> Please fill out both confession and campus before submitting !
+         	<strong>Oops !</strong> Please fill out both _______ and ____________ before submitting !
         </div>
         <?php } ?>
-        <h2 class="form-signin-heading">Post your confession here...</h2><br>
+        <h2 class="form-signin-heading">Post your ______ here...</h2><br>
         <p>
-          <textarea name="confession" cols="500" rows="3" id="confession" placeholder="Enter your ... " required ></textarea>
+          <textarea name="name" cols="500" rows="3" id="id" placeholder="Enter your ... " required ></textarea>
         </p>
         <p>
           <label for="campus"></label>
-          <select name="campus" id="campus" required>
-            <option value="" selected>Please select Your Campus... </option>
-            <option value="Coimbatore"></option>
-            <option value="Amritapuri"></option>
-            <option value="Bangalore"></option>
-            <option value="Kochi"></option>
-            <option value="Mysore"></option>
+          <select name="name" id="id" required>
+            <option value="" selected>Please select Your... </option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
           </select>
         </p>
         <button class="btn btn-large btn-primary" type="submit" name="submit">Submit</button> &nbsp; &nbsp;
@@ -77,28 +77,9 @@ mysql_select_db("database");
 	<?php } 
 	function process()
 	{
-		if(empty($_POST)||empty($_POST['confession'])||empty($_POST['campus'])||$_POST['confession']==''||$_POST['campus']=='')
-		{
-			$header_string="Location: http://example.tk/?status=error";
-			header($header_string); 
-		}
-		$confession=$_POST['confession'];
-		$campus=$_POST['campus'];
-		if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
-		{
-			$ip=$_SERVER['HTTP_CLIENT_IP'];
-		}
-		elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
-		{
-			$ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
-		}
-		else
-		{
-			$ip=$_SERVER['REMOTE_ADDR'];
-		}
 		date_default_timezone_set('Asia/Calcutta');
 		$date = date('d-m-Y h:i:s a', time());
-		$sql="INSERT INTO posts (confession,campus,datetime,status,ip) VALUES('$confession','$campus','$date','pending','$ip')";
+		$sql="INSERT INTO posts (x,y,date,status) VALUES('$x','$y','$date','pending')";
 		mysql_query($sql);
 	?>
     
