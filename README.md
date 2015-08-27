@@ -1,9 +1,9 @@
-FACEBOOK PAGES MANAGER
+Facebook Pages Manager
 ======================
 
 An open-sourced Facebook Page Manager written in PHP and based on Twitter Bootstrap UI (HTML5).
 
-STATUS: ABANDONED
+**STATUS: ABANDONED**
 
 REQUIREMENTS
 ============
